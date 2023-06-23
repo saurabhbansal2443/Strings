@@ -6,6 +6,8 @@ public class secondFrequent {
 
         char ans = calculateFrequency(str);
 
+        System.out.println(ans);
+
 
     }
 
@@ -26,8 +28,23 @@ public class secondFrequent {
             }
         }
 
-        System.out.print(Arrays.toString(fre));
+        // System.out.print(Arrays.toString(fre));
 
-        return 'a';
+        int maxIdx=0;
+        int smaxIdx=0;
+
+        for(int i=0;i<fre.length;i++){
+
+            if(fre[i]>fre[maxIdx]){
+
+                smaxIdx=maxIdx;
+                maxIdx=i;
+            }else if(fre[i]>fre[smaxIdx]){
+                smaxIdx=i;
+            }
+        }
+        char ans = (char)(smaxIdx+'a');
+
+        return ans;
     }
 }
