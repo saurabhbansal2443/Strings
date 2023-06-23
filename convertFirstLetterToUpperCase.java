@@ -2,7 +2,7 @@ public class convertFirstLetterToUpperCase {
     public static void main(String[] args) {
         String str = "Hello in the world of java ";
 
-        String ans = convert2(str);
+        String ans = convert(str);
 
         System.out.println(ans);
 
