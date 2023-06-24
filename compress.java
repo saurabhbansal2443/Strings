@@ -34,11 +34,10 @@ public class compress {
 
             }
 
-             if (count > 1) {
-                        ans += count;
-                    }
-                    ans += str.charAt(str.length()-1);
-                   
+            if (count > 1) {
+                ans += count;
+            }
+            ans += str.charAt(str.length() - 1);
 
             return ans;
 
