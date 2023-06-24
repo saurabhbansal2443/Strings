@@ -4,9 +4,10 @@ public class camelCase {
 
         // output => helloInTheWorldOfJava
 
-        String ans = methodOne("");
+        String ans = methodOne(str);
+        String ans2 =methodTwo(str);
 
-        System.out.println(ans);
+        System.out.println(ans2);
     }
 
     // first method using split function
@@ -15,6 +16,8 @@ public class camelCase {
 
         if(str.length()==0){
             return "";
+        }else if (str.length()==1){
+            return str;
         }
         String ans = "";
         String[] arr = str.split(" ");
@@ -43,5 +46,40 @@ public class camelCase {
 
         return ans ;
 
+    }
+
+    public static String methodTwo(String str){
+       if(str.length()==0){
+            return "";
+        }else if (str.length()==1){
+            return str;
+        }
+
+
+
+        String ans = "";
+        char fc = str.charAt(0);
+
+        if(fc>='A' && fc<='Z'){
+            fc=(char)(fc-'A'+'a');
+        }
+        ans+=fc;
+
+        for(int i=1;i<str.length();i++){
+
+            char curr = str.charAt(i);
+            char pre = str.charAt(i-1);
+
+            if(pre==' '){
+                if(curr>='a' && curr<='z'){
+                curr=(char)(curr-'a'+'A');
+               }
+               ans+=curr;
+            }else if(curr!=' '){
+                ans+=curr;
+            }
+        }
+
+        return ans ;
     }
 }
