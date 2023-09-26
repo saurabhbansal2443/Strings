@@ -1,27 +1,24 @@
 public class countVowels {
     public static void main(String[] args) {
-        String str = "Hello in the world of programming";
 
-        int ans = countVowels(str);
+        String str = "hello to the world ";
+
+        int ans = countVowel(str);
 
         System.out.println(ans);
-
-
     }
 
-    public static int countVowels(String str){
+    public static int countVowel(String str) {
 
-        int count =0;
+        int count = 0;
 
-        for(int i=0;i<str.length();i++){
+        for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-
-            if( ch == 'a' || ch=='e' || ch == 'i' || ch == 'o' || ch=='u' || ch == 'A' || ch == 'E' || ch=='I' || ch == 'O' || ch == 'U'){
+            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
                 count++;
             }
-            
         }
-
         return count;
+
     }
 }
