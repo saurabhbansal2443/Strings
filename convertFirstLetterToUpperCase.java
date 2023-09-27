@@ -14,7 +14,7 @@ public class convertFirstLetterToUpperCase {
 
     public static String convert(String str){
 
-        String[] arr= str.split(" ");
+        String[] arr= str.split(" ");;
 
         String ans = "";
 
